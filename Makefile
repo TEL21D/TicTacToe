@@ -1,10 +1,14 @@
-all: tictactoe.out
+SOURCES = $(wildcard *.cpp)
+all: tictactoe.exe
 
-tictactoe.out:
-	g++ -std=c++17 -o tictactoe.out tictactoe.cpp
+tictactoe.exe: $(SOURCES)
+	g++ -std=c++17 -o tictactoe.exe tictactoe.cpp
 
-run: tictactoe.out
-	./tictactoe.out
+run: tictactoe.exe
+	./tictactoe.exe
+
+
+.PHONY: clean
 
 clean:
-	rm tictactoe.out
+	del /q *.exe
