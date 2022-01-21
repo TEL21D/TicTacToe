@@ -24,6 +24,13 @@ Die Spieler werden abwechselnd nach ihrem Zug gefragt, wobei sie dann die Nummer
 Anschließend wird der gemachte Zug (das Spielfeld) angezeigt und der andere Spieler ist an der Reihe.
 Sobald ein Spieler gewinnt oder das Spielfeld voll ist, wird dies angezeigt und das Spiel endet.
 
+## Programm ausführen:
+- Im Terminal:
+  - Kompilieren und Auführen: `make run`
+  - Programmdatei löschen: `make clean`
+- Über VsCode:
+  -   Windows: `Strg` + `SHIFT`+ `B`
+  -   MAC: `CMD` + `SHIFT`+ `B`
 
 # Architektur des Programms
 Die main Funktion initialisiert das Spielfeld.
