@@ -3,12 +3,9 @@
 #include <string>
 
 // Funktionsprotoypen
-/*
-* Felder prüfen und bei Bedarf Gewinner ausgaben
-*/
 bool gameover();
 // Eventuell Funktion um Reihen und Spalten zu checken
-void print_board();
+void print_board(const std::vector<std::string> &feld);
 
 void insert_move();
 
@@ -39,16 +36,19 @@ int main(int argc, char const *argv[])
       std::cout << " Spieler " << player << " ist am Zug\n";
       // Feld ausgaben
       // Eingabe vom Spieler
+      // Spieler wechseln
    }
 
    return 0;
 }
 
-
+/*
+* Felder prüfen und bei Bedarf Gewinner ausgaben
+*/
 bool gameover() {
    return true;
 }
 // Eventuell Funktion um Reihen und Spalten zu checken
-void print_board() {
+void print_board(const std::vector<std::string> &feld) {
 
 }
