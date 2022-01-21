@@ -32,6 +32,27 @@ Sobald ein Spieler gewinnt oder das Spielfeld voll ist, wird dies angezeigt und 
   -   Windows: `Strg` + `SHIFT`+ `B`
   -   MAC: `CMD` + `SHIFT`+ `B`
 
+## Beispielausgabe
+```Shell
+----------
+1 | 2 | 3
+----------
+4 | 5 | 6
+----------
+7 | 8 | 9
+----------
+Spieler X, bitte Spielfeld auswaehlen: 1
+
+----------
+X | 2 | 3
+----------
+4 | 5 | 6
+----------
+7 | 8 | 9
+----------
+Spieler O, bitte Spielfeld auswaehlen: 
+```
+
 # Architektur des Programms
 Die main Funktion initialisiert das Spielfeld.
 Das Spiel läuft in einer while Schleife, welche Prüft ob die Spielbedingungen noch gegeben sind (noch keine 9 Züge oder ein Spieler hat gewonnen).
