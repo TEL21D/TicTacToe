@@ -1,14 +1,16 @@
-SOURCES = $(wildcard *.cpp)
-all: tictactoe.exe
+SOURCES := $(wildcard *.cpp)
+TARGET := tictactoe.exe
 
-tictactoe.exe: $(SOURCES)
-	g++ -std=c++17 -o tictactoe.exe tictactoe.cpp
+all: $(TARGET)
 
-run: tictactoe.exe
-	./tictactoe.exe
+$(TARGET): $(SOURCES)
+	g++ -std=c++17 -o $(TARGET) $^
+
+run: $(TARGET)
+	./$(TARGET)
 
 
 .PHONY: clean
 
 clean:
-	del /q *.exe
+	rm -r *.exe
