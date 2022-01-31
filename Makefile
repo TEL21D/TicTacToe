@@ -1,5 +1,5 @@
-SOURCES := $(wildcard *.cpp)
-TARGET := tictactoe.exe
+SOURCES := $(wildcard *.cpp) # searches for all *.cpp files
+TARGET := tictactoe.exe		# name of the output program
 
 all: $(TARGET)
 
