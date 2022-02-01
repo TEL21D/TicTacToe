@@ -2,6 +2,13 @@
 Dokumentation zum Spiel Tic-Tac-Toe
 
 
+## Auslagern von Funktionen in andere `.cpp` Dateien
+
+- Anlegen einer `.hpp` Datei und kopieren/anlegen der Funktionsprototypen
+- `.hpp` Datei in der neuen/ausgelagerten `.cpp` Datei inludieren und die Funktion implementieren
+- `.hpp` Datei in den `.cpp` Dateien inkludieren in denen man die ausgelagerte Funktion (hier `print_board(...)`) verwenden möchte
+- `.hpp` Datei wird mit Anführungsstrichen `#include "print.hpp"` inkludiert
+
 ## Spielidee und Spielregeln
 Tic Tac Toe wird von zwei Spielern auf einem 3x3-Feld gespielt.
 Jeder Spieler hat ein Symbol, mit dem er Felder markiert, üblicherweise 'X' und 'O'.
@@ -50,7 +57,7 @@ X | 2 | 3
 ----------
 7 | 8 | 9
 ----------
-Spieler O, bitte Spielfeld auswaehlen: 
+Spieler O, bitte Spielfeld auswaehlen:
 ```
 
 # Architektur des Programms
