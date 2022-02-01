@@ -13,4 +13,4 @@ run: $(TARGET)
 .PHONY: clean
 
 clean:
-	rm -r *.exe
+	del /q *.exe
