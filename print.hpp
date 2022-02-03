@@ -8,5 +8,6 @@
 
 // Eventuell Funktion um Reihen und Spalten zu checken
 void print_board(const std::vector<std::string> &feld);
+void print_winner(char player);
 
 #endif /* PRINT_HPP */
