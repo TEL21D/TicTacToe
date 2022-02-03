@@ -1,16 +1,16 @@
 #include "print.hpp"
 
-
 // Eventuell Funktion um Reihen und Spalten zu checken
-void print_board(const std::vector<std::string> &feld) {
-   // std::cout << "feld[0][0]-" << feld[0][0] << "-" << std::endl;
-   // std::cout << "feld[2][2]:-" << feld[2][2] << "-" << std::endl;
-   // for (size_t i = 0; i < feld.size(); i++)
-   std::cout << "------------\n";
-   for (std::string zeile: feld)
+void print_board(const std::vector<std::string> &feld)
+{
+   std::cout << "\n----------\n";
+   for (int i = 0; i < feld.size(); i++)
    {
-      std::cout << "-" << zeile[0] << " | " << zeile[1]
-      << " | " << zeile[2] << "-" << std::endl;
-      std::cout << "------------\n";
+      std::cout << feld[i][0] << " | " << feld[i][1] << " | " << feld[i][2] << "\n----------\n";
    }
+}
+
+void print_winner(char player)
+{
+   std::cout << "Spieler " << player << " hat das Spiel gewonnen!\n";
 }

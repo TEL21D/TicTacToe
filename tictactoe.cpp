@@ -1,42 +1,49 @@
-// #include <iostream>
-// #include <vector>
-// #include <string>
-#include "print.hpp"
+#include "check_rules.hpp"
 
-// Funktionsprotoypen
-/*
-* Felder prüfen und bei Bedarf Gewinner ausgaben
-*/
-bool gameover();
-void insert_move();
-
-int main(int argc, char const *argv[])
-{
-   // Datentypen
-   // 2d Array/Vector
-   std::vector<std::string> feld = {
-      "123",
-      "345",
-      "789"
-   };
-
-   // Spieler
-   char player = 'X'; // 'X' bzw. 'O'
-
-   do {
-      std::cout << " Spieler " << player << " ist am Zug\n";
-      // Feld ausgaben
-      print_board(feld);
-      // Eingabe vom Spieler
-      // insert_move();
-      // Spieler wechseln
-   }
-   while (!gameover());
-
-   return 0;
-}
+using namespace std;
 
 
-bool gameover() {
-   return true;
+int main() {
+  // hier entsteht das Spiel TicTacToe
+  std::cout << "Willkommen zu TicTacToe!\n";
+
+  //Declare variables
+  int rounds = 0;
+  char player = 'X';
+
+  // Declare Board
+  vector<string> board = {
+    "123",
+    "456",
+    "789"
+  };
+
+  // Print Board
+  print_board(board);
+
+  while (true) {
+
+    rounds++;
+    insert_move(board, player);
+    //switch player
+    if(player == 'X') {
+      player = 'O';
+    }
+    else {
+      player = 'X';
+    }
+
+    print_board(board);
+
+    /*
+    * check end of game
+    * Eine andere Möglichkeit wäre es in der while loop zu checken
+    * anstatt nur true dort stehen zu haben.
+    * */
+    if(game_over(rounds, board)){
+      break;
+    }
+  }
+
+  return 0;
 }
